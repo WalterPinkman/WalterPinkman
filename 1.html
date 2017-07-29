@@ -1,0 +1,147 @@
+<!doctype html>
+<head>
+<!--
+<link rel="stylesheet" type="text/css" href="2.css">
+-->
+<title>Days of Successful Cooperation</title>
+<meta http-equiv="refresh" content="3600">
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-weight: regular;
+
+  background-color: #d09683;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+header {
+  min-height: 150px;
+  background: #73605b;
+  color: #fff;
+  text-align: center;
+}
+#bg_s {
+	opacity: 0.4;
+	filter: alpha(opacity=40)
+}
+#bg_s:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90)
+}
+#bg_o {
+	opacity: 0.4;
+	filter: alpha(opacity=40)
+}
+#bg_o:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90)
+}
+#counter {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px 0 0 0;
+  text-align: center;
+}
+#counter h {
+  font-size: 80px;
+  font-family: "Teko", sans-serif;
+  color: #2d4262;
+}
+#counter #days {
+  font-family: "Aldrich", sans-serif;
+  font-size: 150px;
+  padding: 30px 0 10px 0;
+  color: #fff;
+}
+footer {
+   width: 100%;
+   max-width: 1050px;
+   margin: 0 auto;
+   font-size: 22px;
+   text-align: center;
+   position:fixed;bottom:0;left:0;right:0;height:100px;
+}
+</style>
+</head>
+<!--
+<header>
+  <h1>SCHOKINAG-Schokolade-Industrie GmbH + OutsourceBG Services Ltd. </h1>
+</header>
+-->
+<div id="counter">
+  <h>Days of Successful Cooperation:</h>
+  <div>
+    <p id="days"></p>
+  </div>
+</div>
+<div id="bg_s">
+	<a href="http://schokinag.com">
+		<IMG STYLE="position:absolute; top:0; left:0;" SRC="http://i.imgur.com/g3bgcx2.png">
+	</a>
+</div>
+<div id="bg_o">
+	<a href="http://services.outsource.bg/">
+		<IMG STYLE="position:absolute; bottom:0; right:0;" SRC="http://i.imgur.com/IR7yCb8.png">
+	</a>
+</div>
+<footer>
+  <p>This shows the days passed since the collaboration between SCHOKINAG-Schokolade-Industrie GmbH and OutsourceBG Services Ltd. originally started.</p>
+</footer>
+
+<script>
+/*
+Day counter
+*/
+	var todayRaw = new Date();
+	var todayYY = todayRaw.getFullYear();
+	var todayMM = todayRaw.getMonth();
+	var todayDD = todayRaw.getDate();
+	var today = new Date(todayYY, todayMM, todayDD);
+	var start = new Date(2016, 4, 1); //YYYY, MM, DD //month counts from 00 i.e may = 4 not 5
+	
+	var difference = Math.round((today - start)/(1000*60*60*24));
+	document.querySelector('#days').innerHTML = difference;
+	
+	//document.querySelector('#start').innerHTML = start; 
+	
+	//setInterval (function() {
+	//	var difference = Math.round((today - start)/(1000*60*60*24));
+	//	document.querySelector('#days').innerHTML = difference;
+	//}, 5000);
+	
+	
+</script>
+
+<script>
+/*
+Auto Refresh Page with Time script
+
+
+var limit="240:0"
+var doctitle = document.title
+var parselimit=limit.split(":")
+parselimit=parselimit[0]*60+parselimit[1]*1
+
+function beginrefresh(){
+	if (parselimit==1)
+		window.location.reload()
+	else{ 
+		parselimit-=1
+		curmin=Math.floor(parselimit/60)
+		cursec=parselimit%60
+		if (curmin!=0)
+			curtime=curmin+" minutes and "+cursec+" seconds left until page refresh!"
+		else
+			curtime=cursec+" seconds left until page refresh!"
+//		document.title = doctitle + ' (' + curtime +')'
+		setTimeout("beginrefresh()",1000)
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", beginrefresh, false)
+else if (window.attachEvent)
+	window.attachEvent("load", beginrefresh)
+*/
+</script>
